@@ -1,9 +1,3 @@
-<template>
-  <div class="movie-list">
-    <movie-item v-for="movie in movies" :key="movie.imdbID" :movie="movie"></movie-item>
-  </div>
-</template>
-
 <script>
 import MovieItem from './MovieItem.vue';
 
@@ -17,6 +11,12 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="movie-list">
+    <movie-item v-for="movie in movies" :key="movie.imdbID" :movie="movie"></movie-item>
+  </div>
+</template>
 
 <style>
 .movie-list {

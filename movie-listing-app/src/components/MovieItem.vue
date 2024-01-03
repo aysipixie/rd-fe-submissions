@@ -1,11 +1,3 @@
-<template>
-    <div class="movie-item">
-        <img :src="movie.Poster" alt="Movie Poster" v-if="movie.Poster !== 'N/A'" />
-        <h3>{{ movie.Title }}</h3>
-        <p>{{ movie.Year }}</p>
-    </div>
-</template>
-  
 <script>
 export default {
     name: 'MovieItem',
@@ -14,6 +6,14 @@ export default {
     }
 }
 </script>
+
+<template>
+    <div class="movie-item">
+        <img :src="movie.Poster" alt="Movie Poster" v-if="movie.Poster !== 'N/A'" />
+        <h3>{{ movie.Title }}</h3>
+        <p>{{ movie.Year }}</p>
+    </div>
+</template>
   
 <style>
 .movie-item {

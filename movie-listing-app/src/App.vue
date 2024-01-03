@@ -1,11 +1,3 @@
-<template>
-  <div id="app">
-    <div v-if="loading">Loading...</div>
-    <div v-if="error">{{ error }}</div>
-    <movie-list v-if="movies" :movies="movies"></movie-list>
-  </div>
-</template>
-
 <script>
 import { ref, onMounted } from 'vue';
 import MovieList from './components/MovieList.vue';
@@ -45,6 +37,14 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div id="app">
+    <div v-if="loading">Loading...</div>
+    <div v-if="error">{{ error }}</div>
+    <movie-list v-if="movies" :movies="movies"></movie-list>
+  </div>
+</template>
 
 <style>
 /* App component styling goes here */
